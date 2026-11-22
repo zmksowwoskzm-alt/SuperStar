@@ -38,7 +38,7 @@ jobs:
           TIKU_MODEL: ${{ secrets.TIKU_MODEL }}
           NOTIFY_URL: ${{ secrets.NOTIFY_URL }}
         run: |
-           cat > config.ini <<EOF
+          cat > config.ini <<EOF
           [tiku]
           provider=AI
           endpoint=$TIKU_ENDPOINT
@@ -51,10 +51,6 @@ jobs:
           delay=1.0
           true_list=正确,对,√,是
           false_list=错误,错,×,否,不对,不正确
-          EOF
-          [notification]
-          provider=Bark
-          url=$NOTIFY_URL
           EOF
 
       - name: 6. 开始刷课
