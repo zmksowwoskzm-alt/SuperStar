@@ -40,15 +40,12 @@ jobs:
         run: |
           cat > config.ini <<EOF
           [tiku]
-          provider=TikuGo,TikuLike,AI
+          provider=TikuGo,AI
           endpoint=$TIKU_ENDPOINT
           key=$TIKU_KEY
           model=$TIKU_MODEL
           min_interval_seconds=5
           http_proxy=
-          likeapi_search=true
-          likeapi_retry=true
-          likeapi_retry_times=3
           submit=true
           cover_rate=0.8
           delay=2.0
